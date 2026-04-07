@@ -6,7 +6,7 @@ import os
 import anthropic
 from typing import Optional
 
-from .dict.builtin import EN2CLASSICAL_BUILTIN
+from .dict import get_merged_dict
 
 # 默认使用 Opus 4.6
 DEFAULT_MODEL = "claude-opus-4-6"
@@ -51,9 +51,10 @@ class Translator:
         """
         word = word.strip().lower()
 
-        # 1. 词典优先
-        if word in EN2CLASSICAL_BUILTIN:
-            return EN2CLASSICAL_BUILTIN[word]
+        # 1. 词典优先（YAML > builtin）
+        merged = get_merged_dict()
+        if word in merged:
+            return merged[word]
 
         # 2. 缓存命中
         if self.cache and word in self._cache:

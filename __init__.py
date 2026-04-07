@@ -9,6 +9,7 @@ promote2classical - 英文单词转文言文库，节约Token
 """
 
 __version__ = "0.1.0"
-__all__ = ["translate", "Translator"]
+__all__ = ["translate", "Translator", "get_merged_dict"]
 
 from .core import Translator, translate
+from .dict import get_merged_dict
