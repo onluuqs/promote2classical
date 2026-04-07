@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+promote2classical.egg-info/PKG-INFO
+promote2classical.egg-info/SOURCES.txt
+promote2classical.egg-info/dependency_links.txt
+promote2classical.egg-info/requires.txt
+promote2classical.egg-info/top_level.txt
+tests/test_promote2classical.py
