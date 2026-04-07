@@ -26,7 +26,6 @@ EN2CLASSICAL_BUILTIN: dict[str, str] = {
     "finish": "竟",
     "create": "造",
     "destroy": "毁",
-    "build": "筑",
     "build": "建",
     "make": "制",
     "do": "作",
