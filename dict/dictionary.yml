@@ -1045,7 +1045,7 @@ entries:
     domain: programming
     note: 布尔
 
-  - en: null
+  - en: 'null'
     classical: 空
     domain: programming
     note: 空值
@@ -2411,12 +2411,12 @@ entries:
     domain: common
     note: 清楚
 
-  - en: true
+  - en: 'true'
     classical: 真
     domain: common
     note: 真
 
-  - en: false
+  - en: 'false'
     classical: 伪
     domain: common
     note: 假
