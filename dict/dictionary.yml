@@ -1205,11 +1205,6 @@ entries:
     domain: programming
     note: 预发布
 
-  - en: deployment
-    classical: 布
-    domain: programming
-    note: 部署
-
   - en: rollback
     classical: 回
     domain: programming
@@ -1380,11 +1375,6 @@ entries:
     domain: programming
     note: 中间件
 
-  - en: pipeline
-    classical: 管
-    domain: programming
-    note: 管道
-
   - en: filter
     classical: 滤
     domain: programming
@@ -1445,11 +1435,6 @@ entries:
     domain: programming
     note: 垃圾回收
 
-  - en: memory
-    classical: 存
-    domain: programming
-    note: 内存
-
   - en: heap
     classical: 堆
     domain: programming
@@ -1494,11 +1479,6 @@ entries:
     classical: 饼
     domain: programming
     note: Cookie
-
-  - en: token
-    classical: 牌
-    domain: programming
-    note: 令牌
 
   - en: header
     classical: 头
@@ -1559,11 +1539,6 @@ entries:
     classical: 交
     domain: programming
     note: 提交
-
-  - en: rollback
-    classical: 回
-    domain: programming
-    note: 回滚
 
   - en: isolation
     classical: 隔
@@ -1744,11 +1719,6 @@ entries:
     classical: 性
     domain: programming
     note: 属性
-
-  - en: annotation
-    classical: 注
-    domain: programming
-    note: 注解
 
   - en: comment
     classical: 注
@@ -2006,11 +1976,6 @@ entries:
     domain: common
     note: 接收
 
-  - en: request
-    classical: 请
-    domain: common
-    note: 请求
-
   - en: respond
     classical: 应
     domain: common
@@ -2200,16 +2165,6 @@ entries:
     classical: 拉
     domain: common
     note: 拉
-
-  - en: throw
-    classical: 抛
-    domain: common
-    note: 抛
-
-  - en: catch
-    classical: 接
-    domain: common
-    note: 接
 
   - en: hit
     classical: 击
