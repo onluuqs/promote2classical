@@ -24,7 +24,7 @@ pip install promote2classical
 或直接从源码安装：
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/promote2classical.git
+git clone https://github.com/onluuqs/promote2classical.git
 cd promote2classical
 pip install -e .
 ```
@@ -40,41 +40,10 @@ print(result)  # 升
 
 # 批量翻译
 from promote2classical import Translator
-t = Translator(api_key="your-api-key")
+t = Translator()
 words = ["promote", "enhance", "improve"]
 results = t.batch_translate(words)
 print(results)  # ['升', '强', '改良']
-```
-
-## 高级用法
-
-### 使用自定义API密钥
-
-```python
-import os
-from promote2classical import Translator
-
-# 方式1: 环境变量
-# export ANTHROPIC_API_KEY=sk-...
-
-# 方式2: 直接传入
-translator = Translator(api_key="sk-ant-api03-...")
-result = translator.translate("accelerate")
-print(result)  # 疾
-```
-
-### 自定义模型
-
-```python
-translator = Translator(model="claude-opus-4-6")  # 默认
-# 或使用其他模型
-translator = Translator(model="claude-sonnet-4-6")
-```
-
-### 禁用缓存
-
-```python
-translator = Translator(cache=False)
 ```
 
 ### 扩展词典
@@ -105,39 +74,24 @@ EN2CLASSICAL_BUILTIN["world"] = "寰"
 ┌─────────────────────────────────────────────┐
 │           promote2classical                 │
 ├─────────────────────────────────────────────┤
-│  1. 词典查找 (builtin dict)                  │
+│  1. 词典查找 (YAML > builtin dict)           │
 │     ↓ 命中                                  │
 │     返回文言文                               │
 │                                             │
-│  2. 缓存查找                                 │
-│     ↓ 命中                                  │
-│     返回缓存结果                             │
-│                                             │
-│  3. AI翻译 (Claude API)                     │
-│     ↓                                       │
-│     返回翻译结果                             │
+│  2. 词典无结果                              │
+│     ↓                                      │
+│     返回原英文单词                            │
 └─────────────────────────────────────────────┘
 ```
-
-## AI翻译策略
-
-对于词典中没有的词汇，库会调用Claude API进行翻译：
-
-- 使用Opus 4.6模型（默认）
-- 提示词精简，减少翻译本身消耗的Token
-- 自动缓存翻译结果
 
 ## 适用场景
 
 - 大量AI提示词需要Token优化
-- API调用成本敏感
 - 需要中英双语对照开发
 
 ## 不适用场景
 
-- 需要精确语义的场景（文言文有多义性）
-- 实时性要求极高的场景（AI翻译有延迟）
-- 词典覆盖不足的专业术语
+- 词典覆盖不足的专业术语（可扩展词典解决）
 
 ## License
 
